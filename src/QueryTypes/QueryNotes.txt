@@ -1,0 +1,6 @@
+1. There are three types of query 
+    a) getBy
+    b) queryBy
+    c) findBy
+ 2. As we used to do query using the getBy in the same way we can do it using the queryBy
+ 3. While using the findBy query types we need to use the async and await

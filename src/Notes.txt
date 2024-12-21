@@ -1,0 +1,73 @@
+1. Testing libraries are pre built installed in the package.json
+2. Jest is basically a testing library 
+3. test is basically a jest function which we don't need to import
+4. first we need to render the UI using the render method of testing library
+5. we can get any attribute and reference of UI element using the "Sceeen" method of testing library
+6. we can use the "describe" function to group the test cases 
+7. we can also skip the testcases with the help of describe if we don't want to run them
+8. We can create the nested describe method as well
+9. for a semantic tag the role name should be same otherwise it may differ
+10. fireEvent function is used to basicall play with the event change methods 
+11. To declare the test file either use file extension as fileName.test.js or fileName.spec.js
+12  To declare the test file without extension use a folder named as "__tests__"
+13. We have "Before" and "After" hook which we performed without using use keyword
+14. hooks are: beforeAll, beforeEach, afterAll and afterEach 
+15. As name conveyed:
+   a) beforeAll -> Will get run only once before all the testcases of a file only
+   b) beforeEach -> Will get run everytime before running every test of a file only
+   c) afterAll -> Will get run only once after all the testcases of a file only
+   d) beforeAll -> Will get run everytime after running every test of a file only
+16. Above hooks are used to perform some database clean operation majorly.
+17. Snapshot Testing -> Mostly done at the end of the requirement, when all the features are completed
+  then at that time we took a snapshot which will be a new file which almost contains the same content
+  as the real file but don't exactly same, so whenever we made any change then it will show us that the
+  new file changes is different from the previus one.
+18. We should avoid testing for external UI library code as those are already tested by them, no need to 
+   test the default functions of js and react.
+19. We should test Component, UI element, custom function, api testing, event testing, props and state,
+ui conditional testing.
+20. We should make a standard for test coverage as nobody tests the 100% of the code
+21. We can't test the custom function in the same way to test the custom function we should declare them 
+in a separate helper.js then from there we can import them in test file and use them accordingly.
+22. There are a concept of RTL queries to find the elements, to find the elements we can use
+   a) By element type 
+   b) By element name 
+   c) By element id 
+   d) By test id 
+   e) etc 
+ 23. we have made above different ways because there can be a scenario where some of the field may be same
+ so to uniqely identify the element we can take reference through multiple methods
+ 24. Type of RTL Queries 
+    a) For Single element 
+      -> getBy
+      -> queryBy
+      -> findBy
+    b) For multiple elements
+      -> getAllBy
+      -> queryAllBy
+      -> findAllBy
+ 25. Generally in test cases if we fetch the element using name then in html we need to define it label,
+ if it's a self closing tag then we need to use the area-label attribute otherwise the text which we give 
+ will be treated as the label.
+ 26. Priority order of RTL queries
+    a) ByRole
+    b) ByLabelText
+    c) ByPlaceHolderText
+    d) ByText 
+    e) ByDisplayValue
+    f) ByAltText
+    g) ByTitle
+    h) ByTestId
+ 27. Assertions Methods - These are the methods which we used after the expect function in the test file
+ 28. For text match - we can pass the attribute exact as false 
+ 29. There are three types of query 
+    a) getBy
+    b) queryBy
+    c) findBy
+ 30. As we used to do query using the getBy in the same way we can do it using the queryBy
+ 31. While using the findBy query types we need to use the async and await
+ 32. Mostly we used findBy when we need to fetch the data from the API's 
+ 33. We can also get the reference of the element using the `document.querySelector([id,class, etc])`;
+ 34. Within function of react testing library is used to access the child elements of tag
+ 35. UserEvent is used to access the click event or fire event 
+ 36. It is used along with async await 
